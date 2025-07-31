@@ -8,28 +8,30 @@
 ## Setup Instructions
 
 ## 1. Clone the Repository
-bashgit clone <your-repo-url>
-cd draft1
+- bashgit 
+- clone <your-repo-url>
+- cd draft1
 
 ## 2. Configure Environment
-Edit the .env file and add your NewsAPI key:
-notepad .env  # Windows
-Add NewsAPI key:
-envNEWSAPI_KEY=your_newsapi_key_here
+- Edit the .env file and add your NewsAPI key:
+- notepad .env  # Windows
+- Add NewsAPI key:
+- envNEWSAPI_KEY=your_newsapi_key_here
 
 ## 3. Get NewsAPI Key (if you don't have one)
 
-Go to https://newsapi.org/
-Sign up for free account
-Copy your API key from dashboard
-Paste it in the .env file
+- Go to https://newsapi.org/
+- Sign up for free account
+- Copy your API key from dashboard
+- Paste it in the .env file
 
 ## 4. Run the Application
-bash# Build and start all services
-docker-compose up --build
+- bash# 
+- Build and start all services
+- docker-compose up --build
 
 # Or run in background
-docker-compose up -d --build
+- docker-compose up -d --build
 
 The API will be available at:
 - **Base URL**: http://127.0.0.1:8000
