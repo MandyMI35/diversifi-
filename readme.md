@@ -8,9 +8,12 @@
 ## Setup Instructions
 
 ## 1. Clone the Repository
-- bashgit 
-- clone <your-repo-url>
-- cd draft1
+```bashgit
+{
+ clone <your-repo-url>
+ cd draft1
+}
+```
 
 ## 2. Configure Environment
 - Edit the .env file and add your NewsAPI key:
