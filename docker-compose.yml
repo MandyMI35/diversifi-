@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # For Windows/WSL
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgres@host.docker.internal:5432/stock_news"
+      NEWSAPI_KEY: 110d3fe0bc9945dcb59cae19f11279d7
