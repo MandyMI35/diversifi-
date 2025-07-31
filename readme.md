@@ -18,7 +18,7 @@
 - Add NewsAPI key:
 - envNEWSAPI_KEY=your_newsapi_key_here
 
-## 3. Get NewsAPI Key (if you don't have one)
+## 3. Get NewsAPI Key 
 
 - Go to https://newsapi.org/
 - Sign up for free account
