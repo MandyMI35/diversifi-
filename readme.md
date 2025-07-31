@@ -7,53 +7,39 @@
 
 ## Setup Instructions
 
-### 1. Clone the repository
-
-```bash
-git clone <repo-url>
+##1. Clone the Repository
+bashgit clone <your-repo-url>
 cd draft1
-```
 
-### 2. Set up the virtual environment
+##2. Configure Environment
+Edit the .env file and add your NewsAPI key:
+bash# Open .env file in your editor
+notepad .env  # Windows
+# or
+nano .env     # Linux/Mac
+Add your NewsAPI key:
+envNEWSAPI_KEY=your_actual_newsapi_key_here
 
-```
-python -m venv venv
-source venv\Scripts\activate    
-```
+##3. Get NewsAPI Key (if you don't have one)
 
-### 3. Install dependencies
+Go to https://newsapi.org/
+Sign up for free account
+Copy your API key from dashboard
+Paste it in the .env file
 
-```
-pip install -r requirements.txt
-```
+##4. Run the Application
+bash# Build and start all services
+docker-compose up --build
 
-### 4. Environment variables
-
-Create a `.env` file in the root directory and add NewsAPI key:
-
-```
-NEWSAPI_KEY=your_newsapi_key_here
-```
-
-### 5. Set up PostgreSQL
-
-Ensure you have PostgreSQL running. Update the connection string in `main.py` if needed:
-
-```
-DATABASE_URL = "postgresql://postgres:postgres@host.docker.internal:5432/stock_news"
-```
-
-You can use Docker to spin up PostgreSQL locally or connect to an existing database.
-
-### 6. Run the app
-
-```
-uvicorn main:app --reload
-```
+# Or run in background
+docker-compose up -d --build
 
 The API will be available at:
 - **Base URL**: http://127.0.0.1:8000
 - **Interactive docs**: http://127.0.0.1:8000/docs
+
+Note - The postgres service in the docker-compose.yml pulls and runs PostgreSQL in a container.
+It automatically creates the database, user, and handles all configuration.
 
 ## API Endpoint
 
